@@ -1,0 +1,58 @@
+<div class="card">
+  <div class="card-header">
+    
+
+  </div>
+  <div class="card-body">
+    <%= form_with(model: friend) do |form| %>
+  <% if friend.errors.any? %>
+    <div style="color: red">
+      
+      <ul>
+        <% friend.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :first_name, style: "display: block", class:"form-label"%>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :last_name, style: "display: block", class:"form-label"%>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :email, style: "display: block", class:"form-label"%>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :phone,style: "display: block", class:"form-label"%>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :twittter, style: "display: block", class:"form-label"%>
+    <%= form.text_field :twittter %>
+  </div>
+
+  <br/>
+  <div>
+    <%= form.submit class:"btn btn-secondary" %>
+  </div>
+<% end %>
+
+
+  </div>
+  </div>
+</div>
+
+
+
+
+  
